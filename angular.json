@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "paginamantenimiento": {
+    "maintenance": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/paginamantenimiento",
+            "outputPath": "dist/maintenance",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,14 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "paginamantenimiento:build"
+            "browserTarget": "maintenance:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "paginamantenimiento:build:production"
+              "browserTarget": "maintenance:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "paginamantenimiento:build"
+            "browserTarget": "maintenance:build"
           }
         },
         "test": {
@@ -93,7 +90,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -116,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "paginamantenimiento:serve"
+            "devServerTarget": "maintenance:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "paginamantenimiento:serve:production"
+              "devServerTarget": "maintenance:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "paginamantenimiento"
+  "defaultProject": "maintenance"
 }
