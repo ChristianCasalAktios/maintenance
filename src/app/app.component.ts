@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'maintenance';
+  title = 'Web in maintenance';
+  text = 'Please try again later';
 }
