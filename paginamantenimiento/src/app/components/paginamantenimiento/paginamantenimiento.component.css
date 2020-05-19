@@ -1,0 +1,47 @@
+.card{
+  box-shadow: 0px 0px 5px #000;
+}
+.header{
+  text-align: center;
+  margin-top: 5rem;
+}
+.titulo{
+  font-size: 4rem;
+}
+
+.btn-warning{
+  font-weight: bold;
+}
+
+.footer{
+  box-shadow: 0px 0px 5px #000;
+}
+
+.footer button:hover{
+  box-shadow: 0px 0px 5px #ffc107;
+  background-color: #FFD454;
+}
+
+@media (max-width: 577px) {
+  .titulo{
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo{
+  }
+}
+
+@media (min-width: 900px) {
+  .titulo{
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .titulo{
+
+  }
+}
+
+
