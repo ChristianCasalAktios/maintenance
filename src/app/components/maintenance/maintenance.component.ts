@@ -25,8 +25,6 @@ export class MaintenanceComponent implements OnInit {
   open($event: MouseEvent) {
     const today = new Date();
     const newDate = this.dateService.randomDate(this.dateInit, this.dateEnd, today.getHours(), 23);
-    console.log(newDate);
-    console.log(this.dateEnd);
     this.countDown = this.dateService.calculateTime(this.dateInit, newDate);
   }
 }
