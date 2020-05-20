@@ -21,10 +21,4 @@ export class MaintenanceComponent implements OnInit {
   ngOnInit(): void {
     this.countDown = this.dateService.calculateTime(this.dateInit, this.dateEnd);
   }
-
-  open($event: MouseEvent) {
-    const today = new Date();
-    const newDate = this.dateService.randomDate(this.dateInit, this.dateEnd, today.getHours(), 23);
-    this.countDown = this.dateService.calculateTime(this.dateInit, newDate);
-  }
 }

@@ -9,7 +9,7 @@ export class DateService {
 
   }
   public calculateTime(dateInit: any, dateEnd: any) {
-      console.log('init menor que end');
+      console.log('inicio menor que end');
       if (dateInit > new Date()){
         // @ts-ignore
         this.countDown = (dateEnd - new Date()) / 1000 ;
@@ -19,12 +19,5 @@ export class DateService {
         return this.countDown;
       }
       // @ts-ignore
-  }
-  public randomDate(start, end, startHour, endHour) {
-    const date = new Date(+start + Math.random() * (end - start));
-    // tslint:disable-next-line:no-bitwise
-    const hour = startHour + Math.random() * (endHour - startHour) | 0;
-    date.setHours(hour);
-    return date;
   }
 }
