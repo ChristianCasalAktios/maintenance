@@ -9,7 +9,6 @@ export class DateService {
 
   }
   public calculateTime(dateInit: any, dateEnd: any) {
-      console.log('inicio menor que end');
       if (dateInit > new Date()){
         // @ts-ignore
         this.countDown = (dateEnd - new Date()) / 1000 ;
@@ -18,6 +17,5 @@ export class DateService {
         this.countDown = (dateEnd - dateInit) / 1000 ;
         return this.countDown;
       }
-      // @ts-ignore
   }
 }
