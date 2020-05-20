@@ -1,10 +1,13 @@
-<div class="jumbotron text-center h-100">
-  <div class="message">
-    <div>
-      <countdown [config]="{leftTime: countDown}"></countdown>
+  <div class="d-flex text-center justify-content-center">
+    <div class="align-middle bg-white shadow p-3">
+      <div>
+        <countdown [config]="{leftTime: countDown} " (event)="handleEvent($event)"></countdown>
+
+      </div>
+      <i class="material-icons md-48 p-3">healing</i>
+      <h2 class="mb-0">{{ title }}</h2>
+      <span>{{ text }}</span>
     </div>
-    <i class="material-icons md-48 maintenance-image">healing</i>
-    <h2 class="mb-0">{{ title }}</h2>
-    <span>{{ text }}</span>
   </div>
-</div>
+
+

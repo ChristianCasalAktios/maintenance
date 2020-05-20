@@ -1,0 +1,10 @@
+<!--ngModel implica lectura y escritura.-->
+<input type="text" [(ngModel)]="title">
+
+<app-maintenance
+  [title]="title"
+  [text]="text"
+  [url]="url"
+  [dateInit]="dateInit"
+  [dateEnd]="dateEnd">
+</app-maintenance>
