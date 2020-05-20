@@ -1,25 +1,32 @@
 import { Injectable } from '@angular/core';
 
-interface CountDown{
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
 @Injectable({
   providedIn: 'root',
 })
 export class DateService {
-  countDown: CountDown = null;
-
+  countDown: any = null;
   constructor() {
-    // Crear un observable y su subject usando rxjs.
-    // LLamar a un metodo de este servicio (getDate);
-    // Desde el componente subscribirlo al servicio;
-    // Crear un boton que asigne un punto next y posteriormente un subscribe desde el componente.
-    // Implementar el ciclo onDestroy(hacer un desubscribirte).
-  }
-  public calculateTime(dateEnd: Date) {
 
+  }
+  public calculateTime(dateInit: any, dateEnd: any) {
+    if (dateInit < dateEnd){
+      if (dateInit > new Date()){
+        // @ts-ignore
+        this.countDown = (dateEnd - new Date()) / 1000 ;
+        return this.countDown;
+      } else {
+        this.countDown = (dateEnd - dateInit) / 1000 ;
+        return this.countDown;
+      }
+    } else {
+      // @ts-ignore
+    }
+  }
+  public randomDate(start, end, startHour, endHour) {
+    const date = new Date(+start + Math.random() * (end - start));
+    // tslint:disable-next-line:no-bitwise
+    const hour = startHour + Math.random() * (endHour - startHour) | 0;
+    date.setHours(hour);
+    return date;
   }
 }

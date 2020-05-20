@@ -1,9 +1,12 @@
 <div class="jumbotron text-center h-100">
   <div class="message">
     <div>
+      <countdown [config]="{leftTime: countDown}"></countdown>
     </div>
-    <i class="material-icons md-48">healing</i>
+    <i class="material-icons md-48 maintenance-image">healing</i>
     <h2 class="mb-0">{{ title }}</h2>
     <span>{{ text }}</span>
+    <p class="cambiar-dateend"><button (click)="open($event)" class="btn-xs btn-info">Cambiar fecha.</button></p>
+
   </div>
 </div>
